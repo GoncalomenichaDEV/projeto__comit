@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar | Benfica Store</title>
-    <link rel="stylesheet" href="styleregister.css">
-    <link rel="icon" type="jpg" href="benfas.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Benfica Store</title>
+  <link rel="icon" type="image/jpg" href="benfas.jpg">
+  <link rel="stylesheet" href="styleregister.css">
 </head>
-<body><div class="register">
-    <img src="fccreal.jpg">
-    <h1>Benfica Register</h1>
-    <h3>Register</h3>
-    <input class="user" type="text" placeholder="Username" required>
-    <input class="pass" type="password" placeholder="Password" required>
-    <input class="box" type="checkbox">
-    <p class="relembrar">Remember me</p>
-    <button class="botao">Registrar</button>
-    <p class="passforget">Forget Password</p>
-    <p class="login">Login in account</p>
+
+<body>
+  <div class="register-container">
+    <div class="register-box">
+      <img src="fccreal.jpg" alt="Benfica Logo" class="logo">
+      <h1>Benfica Store</h1>
+      <p class="subtitle">Create your account and join the family</p>
+
+      <form>
+        <input type="text" class="input-field" placeholder="Username" required>
+        <input type="email" class="input-field" placeholder="Email" required>
+        <input type="password" class="input-field" placeholder="Password" required>
+        <input type="password" class="input-field" placeholder="Confirm password" required>
+
+        <div class="remember">
+          <label><input type="checkbox"> Remember me</label>
+        </div>
+
+        <button type="submit" class="btn-register">Register</button>
+
+        <p class="have-account">Already have an account? <a href="#">Login</a></p>
+      </form>
     </div>
+  </div>
 </body>
 </html>

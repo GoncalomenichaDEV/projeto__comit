@@ -1,61 +1,140 @@
+/* styleregister.css */
+
 body {
-    background-image: url('jpeg.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    
-    
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+              url('jpeg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.register {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh; 
-    gap: 10px;
-    border: 4px solid red;
-    padding: 15px;
-    margin-left: 700px;
-    margin-right: 700px;
-    background-color: oklch(70.4% 0.191 22.216);
-    opacity: 90%;
+/* Container centralizado */
+.register-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.user, .pass {
-    border-radius: 30px;
-    background-color: red;
-    height: 50px;
-    width: 250px;
-    border-color: red;
-    color: white;
-    padding: 10px;
-}
-.box{
-    margin-right: 230px;
-    margin-top: 20px;
-}
-
-.relembrar{
-    margin-top: -30px;
-    margin-right: 87px;
+/* Caixa principal */
+.register-box {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 2px solid #e00000;
+  border-radius: 12px;
+  padding: 40px 35px;
+  text-align: center;
+  color: white;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 0 20px rgba(224, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 0.8s ease;
 }
 
-.botao {
-    background-color: red;
-    border-radius: 30px;
-    border-color: red;
-    color: white;
-    height: 67px;
-    width: 300px;
+/* Animação suave de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.passforget{
-    margin-right: 180px;
+/* Logo */
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.login {
-    margin-left: 180px;
-    margin-top: -45px;
+/* Texto principal e subtítulo */
+h1 {
+  font-size: 28px;
+  margin: 0;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+.input-field {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: #d00000;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.input-field:focus {
+  box-shadow: 0 0 8px #e00000;
+}
+
+/* Checkbox */
+.remember {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+/* Botão principal */
+.btn-register {
+  width: 100%;
+  background-color: #e00000;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(224,0,0,0.5);
+}
+
+.btn-register:hover {
+  background-color: #a00000;
+  transform: scale(1.05);
+}
+
+/* Link de login */
+.have-account {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ffcccc;
+}
+
+.have-account a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.have-account a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile-friendly */
+@media (max-width: 480px) {
+  .register-box {
+    padding: 25px;
+  }
+
+  .btn-register {
+    font-size: 16px;
+  }
 }
