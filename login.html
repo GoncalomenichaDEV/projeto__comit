@@ -1,33 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
+  <title>Entrar - Benfica Futuro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Benfica Store | Login</title>
-  <link rel="icon" type="image/jpg" href="benfas.jpg">
   <link rel="stylesheet" href="styyelogin.css">
 </head>
-
 <body>
-  <div class="login-container">
-    <div class="login-box">
-      <img src="fccreal.jpg" alt="Benfica Logo" class="logo">
-      <h1>Benfica Store</h1>
-      <p class="subtitle">Welcome back, supporter!</p>
-
-      <form>
-        <input type="text" placeholder="Username" class="input-field" required>
-        <input type="password" placeholder="Password" class="input-field" required>
-
-        <div class="remember">
-          <label><input type="checkbox"> Remember me</label>
-          <a href="#" class="forgot">Forgot password?</a>
-        </div>
-
-        <button type="submit" class="btn-login">Login</button>
-
-        <p class="create">Don't have an account? <a href="#">Create one</a></p>
-      </form>
+  <div class="auth-card">
+    <div class="logo">
+      <div class="logo-orb"></div>
+      <span>Benfica Futuro</span>
+    </div>
+    
+    <h1>🔐 Entrar</h1>
+    <p>Seu acesso ao futuro do SLB</p>
+    
+    <form>
+      <div class="input-group">
+        <input type="email" placeholder="adepto@benfica.pt" required>
+        <label>Email</label>
+        <div class="input-glow"></div>
+      </div>
+      
+      <div class="input-group">
+        <input type="password" placeholder="•••••••••••" required>
+        <label>Palavra-passe</label>
+        <div class="input-glow"></div>
+      </div>
+      
+      <div class="form-options">
+        <label class="checkbox">
+          <input type="checkbox">
+          <span class="checkmark"></span>Lembrar-me
+        </label>
+        <a href="#" class="forgot">Esqueceu?</a>
+      </div>
+      
+      <button type="submit" class="btn-primary">Entrar</button>
+    </form>
+    
+    <div class="auth-links">
+      <a href="register.html">Criar nova conta</a>
+      <a href="index.html">← Voltar loja</a>
     </div>
   </div>
 </body>

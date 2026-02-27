@@ -1,34 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register | Benfica Store</title>
-  <link rel="icon" type="image/jpg" href="benfas.jpg">
-  <link rel="stylesheet" href="styleregister.css">
+  <meta charset="UTF-8" />
+  <title>Registar - Loja Benfica Futurista</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styleregister.css" />
 </head>
-
 <body>
-  <div class="register-container">
-    <div class="register-box">
-      <img src="fccreal.jpg" alt="Benfica Logo" class="logo">
-      <h1>Benfica Store</h1>
-      <p class="subtitle">Create your account and join the family</p>
-
-      <form>
-        <input type="text" class="input-field" placeholder="Username" required>
-        <input type="email" class="input-field" placeholder="Email" required>
-        <input type="password" class="input-field" placeholder="Password" required>
-        <input type="password" class="input-field" placeholder="Confirm password" required>
-
-        <div class="remember">
-          <label><input type="checkbox"> Remember me</label>
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="logo">
+        <div class="logo-orb"></div>
+        <span>Benfica Futuro</span>
+      </div>
+      
+      <h1>Criar Conta</h1>
+      <p>Junte-se à comunidade futurista do SLB</p>
+      
+      <form class="auth-form">
+        <div class="input-group">
+          <label>Nome Completo</label>
+          <input type="text" placeholder="João Silva" required />
+          <div class="input-glow"></div>
         </div>
-
-        <button type="submit" class="btn-register">Register</button>
-
-        <p class="have-account">Already have an account? <a href="#">Login</a></p>
+        
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" placeholder="adepto@benfica.pt" required />
+          <div class="input-glow"></div>
+        </div>
+        
+        <div class="input-group">
+          <label>Palavra-passe</label>
+          <input type="password" placeholder="Mínimo 8 caracteres" required />
+          <div class="input-glow"></div>
+        </div>
+        
+        <div class="input-group">
+          <label>Confirmar Password</label>
+          <input type="password" placeholder="Repita a palavra-passe" required />
+          <div class="input-glow"></div>
+        </div>
+        
+        <button type="submit" class="btn-primary full-width">
+          Criar Conta Benfica
+        </button>
       </form>
+      
+      <div class="auth-links">
+        <a href="login.html">Já tem conta? Entrar</a>
+        <a href="index.html">← Voltar à Loja</a>
+      </div>
     </div>
   </div>
 </body>
