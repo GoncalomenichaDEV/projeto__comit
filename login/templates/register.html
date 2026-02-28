@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Registar - Loja Benfica Futurista</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styleregister.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styleregister.css') }}" />
 </head>
 <body>
   <div class="auth-container">
@@ -17,42 +17,40 @@
       <h1>Criar Conta</h1>
       <p>Junte-se à comunidade futurista do SLB</p>
       
-      <!-- Removido comportamento de submissão real -->
-      <form class="auth-form" onsubmit="return false;">
+      <form class="auth-form" action="/register" method="POST">
+    
         <div class="input-group">
-          <label>Nome Completo</label>
-          <!-- Sem atributo name, logo nada é enviado -->
-          <input type="text" placeholder="João Silva" required />
-          <div class="input-glow"></div>
+            <label>Nome Completo</label>
+            <input type="text" name="nome_completo" placeholder="Username" required />
+            <div class="input-glow"></div>
         </div>
         
         <div class="input-group">
-          <label>Email</label>
-          <input type="email" placeholder="adepto@benfica.pt" required />
-          <div class="input-glow"></div>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="adepto@benfica.pt" required />
+            <div class="input-glow"></div>
         </div>
         
         <div class="input-group">
-          <label>Palavra-passe</label>
-          <input type="password" placeholder="Mínimo 8 caracteres" required />
-          <div class="input-glow"></div>
+            <label>Palavra-passe</label>
+            <input type="password" name="password" placeholder="PASSWORD" required />
+            <div class="input-glow"></div>
         </div>
         
         <div class="input-group">
-          <label>Confirmar Password</label>
-          <input type="password" placeholder="Repita a palavra-passe" required />
-          <div class="input-glow"></div>
+            <label>Confirmar Password</label>
+            <input type="password" name="confirm_password" placeholder="Repita a palavra-passe" required />
+            <div class="input-glow"></div>
         </div>
         
-        <!-- Botão apenas visual, não submete -->
-        <button type="button" class="btn-primary full-width">
-          Criar Conta Benfica
+        <button type="submit" class="btn-primary full-width">
+            Criar Conta Benfica
         </button>
       </form>
       
       <div class="auth-links">
-        <a href="login.html">Já tem conta? Entrar</a>
-        <a href="index.html">← Voltar à Loja</a>
+        <a href="#">Já tem conta? Entrar</a>
+        <a href="/">← Voltar à Loja</a>
       </div>
     </div>
   </div>
