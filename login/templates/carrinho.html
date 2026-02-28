@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>🛒 Carrinho - Benfica Futuro 3D</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="carrinho.css">
+</head>
+<body>
+  <div class="matrix-bg">
+    <div class="matrix-layer layer-1"></div>
+    <div class="matrix-layer layer-2"></div>
+  </div>
+  
+  <div class="bg-grid"></div>
+
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        <div class="logo-orb">
+          <div class="orb-glow"></div>
+        </div>
+        <div class="logo-text">
+          <span class="logo-slb">SLB</span>Futuro<span class="logo-3d">3D</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">🏠 Início</a>
+        <a href="index.html#loja" class="nav-link">🛒 Loja</a>
+        <a href="login.html" class="btn-outline">🔐 Entrar</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="cart-container">
+    <div class="cart-header">
+      <h1 class="cart-title">🛒 CARRINHO ELITE</h1>
+      <div class="cart-status">
+        <div class="status-item active">
+          <div class="status-circle"></div>
+          <span>Carrinho</span>
+        </div>
+        <div class="status-item">
+          <div class="status-circle"></div>
+          <span>Pagamento</span>
+        </div>
+        <div class="status-item">
+          <div class="status-circle"></div>
+          <span>Confirmado</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-content">
+      <!-- CARRINHO VAZIO -->
+      <div class="empty-cart">
+        <div class="empty-icon">🛒</div>
+        <h2 class="empty-title">Carrinho Vazio</h2>
+        <p class="empty-subtitle">Adicione produtos da nossa coleção futurista</p>
+        <a href="index.html#loja" class="btn-empty">🔥 VER COLEÇÃO ELITE</a>
+      </div>
+
+      <!-- SUMMARY SIMPLES -->
+      <div class="cart-summary-empty">
+        <div class="summary-section">
+          <h3>RESUMO</h3>
+          <div class="summary-row">
+            <span>Itens</span>
+            <span>0</span>
+          </div>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span>€0<sup>00</sup></span>
+          </div>
+          <hr class="divider">
+          <div class="summary-total">
+            <span>TOTAL</span>
+            <span>€0<sup>00</sup></span>
+          </div>
+        </div>
+
+        <!-- BOTÃO PRINCIPAL -->
+        <div class="checkout-section">
+          <button class="btn-checkout" disabled>
+            <span>🚀 FINALIZAR COMPRA</span>
+            <div class="checkout-glow"></div>
+          </button>
+          <div class="payment-methods">
+            <span class="payment-label">Métodos Seguros:</span>
+            <div class="payment-icons">
+              <div class="payment-icon visa"></div>
+              <div class="payment-icon mc"></div>
+              <div class="payment-icon mb"></div>
+              <div class="payment-icon crypto"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="logo-orb-small"></div>
+          <span>SLB Futuro 3D © 2026</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

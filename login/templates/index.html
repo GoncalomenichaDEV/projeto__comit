@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>🦅 Loja Oficial Benfica Futurista | SLB 3D Store 2026</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styleindex.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styleindex.css">
 </head>
 <body>
   <div class="bg-grid"></div>
@@ -21,14 +21,14 @@
         </div>
       </div>
       <div class="nav-links">
+        <!-- Link LOJA leva para carrinho.html -->
         <a href="#loja" class="nav-link">🛒 Loja</a>
         <a href="#novidades" class="nav-link">⭐ Novidades</a>
         <a href="#campeao" class="nav-link">🏆 Campeão</a>
         <a href="login.html" class="btn-outline">🔐 Entrar</a>
         <a href="register.html" class="btn-outline ml-1">➕ Registar</a>
-        <a href="#carrinho" class="btn-cart">
-          🛒 <span class="cart-count">3</span>
-        </a>
+        <!-- Carrinho SEM notificações -->
+        <div class="btn-cart-simple"><a href="carrinho.html">🛒</a></div>
       </div>
     </nav>
   </header>
@@ -46,7 +46,7 @@
           <div class="subtitle-item glow-text">⚡ Tecnologia LED Integrada</div>
           <div class="subtitle-item glow-text">💎 Edições Limitadas Elite</div>
         </div>
-        <p class="hero-desc">Viva o futuro do futebol. Materiais revolucionários, design galáctico e exclusividade total para os <strong>50.247 adeptos</strong> da nação vermelha.</p>
+        <p class="hero-desc">Viva o futuro do futebol. Materiais revolucionários, design galáctico e exclusividade total para adeptos da nação vermelha.</p>
         
         <div class="hero-stats">
           <div class="stat-box">
@@ -64,7 +64,8 @@
         </div>
         
         <div class="hero-cta">
-          <a href="#loja" class="btn-primary btn-hero mega-glow">🚀 Comprar Coleção Elite</a>
+          <!-- Botão leva para carrinho.html -->
+          <a href="carrinho.html" class="btn-primary btn-hero mega-glow">🚀 Comprar Coleção Elite</a>
           <div class="hero-trust">
             <span class="trust-badge">✅ Grátis > €100</span>
             <span class="trust-badge">🔒 Pagamento Seguro</span>
@@ -94,7 +95,6 @@
                 <div class="price-old">€299</div>
                 <span class="discount">-33%</span>
               </div>
-              <div class="card-stock">🟢 1276 unidades</div>
             </div>
           </div>
         </div>
@@ -105,10 +105,11 @@
       <div class="container">
         <div class="section-header">
           <h2 class="section-title massive">🔥 <span>COLEÇÃO ELITE</span> 2026</h2>
-          <div class="section-subtitle">Clique em ADQUIRIR para adicionar ao carrinho</div>
+          <div class="section-subtitle">Design revolucionário para o adepto do futuro</div>
         </div>
         
         <div class="product-grid ultimate-grid">
+          <!-- PRODUTO 1 -->
           <div class="product-card ultimate hologram-master">
             <div class="product-media">
               <div class="holo-scanner"></div>
@@ -116,22 +117,96 @@
             </div>
             <div class="product-info">
               <h3>Cachecol Supreme Holo</h3>
-              <div class="product-rating">⭐⭐⭐⭐⭐ 4.9 (2.847)</div>
+              <div class="product-rating">⭐⭐⭐⭐⭐ 4.9</div>
               <div class="product-price ultimate">€79<sup>99</sup></div>
-              <button class="btn-adquirir">ADQUIRIR</button>
+              <!-- Botão ADQUIRIR leva para carrinho -->
+              <a href="carrinho.html" class="btn-adquirir">ADQUIRIR</a>
             </div>
           </div>
 
+          <!-- PRODUTO 2 -->
           <div class="product-card ultimate neon-king">
             <div class="product-media">
               <div class="neon-pulse"></div>
             </div>
             <div class="product-info">
               <h3>Gorra LED Champion</h3>
-              <div class="product-rating">⭐⭐⭐⭐⭐ 4.8 (1.947)</div>
+              <div class="product-rating">⭐⭐⭐⭐⭐ 4.8</div>
               <div class="product-price ultimate">€69<sup>99</sup></div>
-              <button class="btn-adquirir">ADQUIRIR</button>
+              <a href="carrinho.html" class="btn-adquirir">ADQUIRIR</a>
             </div>
           </div>
 
-          <div class="product-card
+          <!-- PRODUTO 3 -->
+          <div class="product-card ultimate cyber-ball">
+            <div class="product-media">
+              <div class="cyber-spin"></div>
+            </div>
+            <div class="product-info">
+              <h3>Chuteira NanoTech</h3>
+              <div class="product-rating">⭐⭐⭐⭐⭐ 5.0</div>
+              <div class="product-price ultimate">€249<sup>99</sup></div>
+              <a href="carrinho.html" class="btn-adquirir">ADQUIRIR</a>
+            </div>
+          </div>
+
+          <!-- PRODUTO 4 -->
+          <div class="product-card ultimate plasma">
+            <div class="product-media">
+              <div class="plasma-field"></div>
+            </div>
+            <div class="product-info">
+              <h3>Caneca Plasma Elite</h3>
+              <div class="product-rating">⭐⭐⭐⭐⭐ 4.9</div>
+              <div class="product-price ultimate">€39<sup>99</sup></div>
+              <a href="carrinho.html" class="btn-adquirir">ADQUIRIR</a>
+            </div>
+          </div>
+
+          <!-- PRODUTO 5 -->
+          <div class="product-card ultimate quantum">
+            <div class="product-media">
+              <div class="quantum-gate"></div>
+            </div>
+            <div class="product-info">
+              <h3>Moeda Crypto SLB</h3>
+              <div class="product-rating">⭐⭐⭐⭐⭐ 4.7</div>
+              <div class="product-price ultimate">€19<sup>99</sup></div>
+              <a href="carrinho.html" class="btn-adquirir">ADQUIRIR</a>
+            </div>
+          </div>
+
+          <!-- PRODUTO 6 -->
+          <div class="product-card ultimate supernova">
+            <div class="product-media">
+              <div class="supernova-explosion"></div>
+            </div>
+            <div class="product-info">
+              <h3>Poster Holo Galáctico</h3>
+              <div class="product-rating">⭐⭐⭐⭐⭐ 4.9</div>
+              <div class="product-price ultimate">€29<sup>99</sup></div>
+              <a href="carrinho.html" class="btn-adquirir">ADQUIRIR</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="logo-orb-small"></div>
+          <span>SLB Futuro 3D © 2026</span>
+        </div>
+        <div class="footer-links">
+          <a href="#">Política Privacidade</a>
+          <a href="#">Termos Uso</a>
+          <a href="#">Contactos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
