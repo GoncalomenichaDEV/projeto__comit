@@ -1,0 +1,107 @@
+/* Variáveis de cores para facilitar mudanças */
+:root {
+    --vermelho-benfica: #E1000F;
+    --vermelho-hover: #b3000c;
+    --cinza-fundo: #f4f4f4;
+    --branco: #ffffff;
+    --texto-escuro: #333333;
+    --borda: #dddddd;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa a altura toda do ecrã */
+}
+
+/* Contentor principal (A Caixa) */
+.caixa-benfica {
+    background-color: var(--branco);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 400px; /* Largura máxima para não ficar gigante em ecrãs grandes */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-top: 8px solid var(--vermelho-benfica);
+    text-align: center;
+}
+
+h2 {
+    color: var(--texto-escuro);
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* Estilo dos campos de texto (Inputs) */
+input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Quando o utilizador clica no campo */
+input:focus {
+    border-color: var(--vermelho-benfica);
+    box-shadow: 0 0 5px rgba(225, 0, 15, 0.2);
+}
+
+/* Botão de Submissão */
+.btn-vermelho {
+    width: 100%;
+    background-color: var(--vermelho-benfica);
+    color: var(--branco);
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition:  0.3s ease, transform 0.1s ease;
+}
+
+.btn-vermelho:hover {
+    background-color: var(--vermelho-hover);
+}
+
+.btn-vermelho:active {
+    transform: scale(0.98); /* Efeito de clique */
+}
+
+/* Link para trocar de página */
+.link-simples {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.link-simples:hover {
+    color: var(--vermelho-benfica);
+    text-decoration: underline;
+}
+
+/* Pequeno detalhe para o rodapé */
+footer {
+    margin-top: 2rem;
+    font-size: 0.7rem;
+    color: #999;
+}

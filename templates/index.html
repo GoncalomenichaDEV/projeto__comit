@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SL Benfica - Dashboard</title>
+    <link rel="stylesheet" href="/static/styleindex.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">SL BENFICA</div>
+        <div class="menu">
+            <a href="#">Início</a>
+            <a href="#">Loja</a>
+            <a href="#">Bilhetes</a>
+            <a href="/login" class="btn-sair">Sair</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="boas-vindas">
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <div class="alerta-sucesso">{{ messages[0] }}</div>
+              {% endif %}
+            {% endwith %}
+            <h1>Olá, Sócio!</h1>
+            <p>Bem-vindo à tua área exclusiva. Aqui tens o resumo da tua atividade.</p>
+        </section>
+
+        <div class="grid-cards">
+            <div class="card">
+                <h3>Próximo Jogo</h3>
+                <p><strong>Benfica vs Porto</strong></p>
+                <p>Estádio da Luz</p>
+                <button class="btn-card">Comprar Bilhete</button>
+            </div>
+
+            <div class="card">
+                <h3>Quota de Sócio</h3>
+                <p>Estado: <span class="tag-pago">Regularizada</span></p>
+                <p>Próximo pagamento: Abril 2026</p>
+                <button class="btn-card">Ver Detalhes</button>
+            </div>
+
+            <div class="card">
+                <h3>Loja Oficial</h3>
+                <p>Tens 10% de desconto acumulado no teu cartão!</p>
+                <button class="btn-card">Ir para a Loja</button>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

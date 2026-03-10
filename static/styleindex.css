@@ -1,0 +1,120 @@
+:root {
+    --vermelho: #E1000F;
+    --preto: #000000;
+    --branco: #ffffff;
+    --cinza-claro: #f8f9fa;
+    --sombra: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--cinza-claro);
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--vermelho);
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--sombra);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.btn-sair {
+    background-color: var(--preto);
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* Conteúdo Principal */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.boas-vindas {
+    margin-bottom: 40px;
+}
+
+.alerta-sucesso {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+}
+
+/* Grid de Cartões */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    border-top: 5px solid var(--vermelho);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--vermelho);
+}
+
+.card p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.tag-pago {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.btn-card {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--preto);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.btn-card:hover {
+    background-color: #333;
+}

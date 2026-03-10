@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benfica - Criar Conta</title>
+    <link rel="stylesheet" href="/static/styleregister.css">
+</head>
+<body>
+
+    <div class="caixa-benfica">
+        <h2>Criar Conta SLB</h2>
+        
+        <form action="/register" method="POST">
+    <input type="text" name="nome" placeholder="Nome" required>
+    <input type="email" name="email" placeholder="E-mail" required>
+    <input type="text" name="nsocio" placeholder="Nº Sócio">
+    <input type="password" name="senhaa" placeholder="Senha" required>
+    <input type="password" name="senha2" placeholder="Confirmar Senha" required>
+    
+    <button type="submit" class="btn-vermelho">Registar</button>
+</form>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <p style="color: red;">{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+        
+        <a href="login.html" class="link-simples">Já tens conta? Entra aqui</a>
+    </div>
+
+</body>
+</html>

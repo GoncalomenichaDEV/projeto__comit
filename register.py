@@ -1,36 +1,52 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 import sqlite3
 
 app = Flask(__name__)
+app.secret_key = "slb_melhor_do_mundo" # Necessário para o flash() funcionar
 
-# Rota Principal - Serve o HTML para o Browser
-@app.route('/')
-def home():
-    # O Flask procura automaticamente na pasta /templates
-    return render_template('register.html')
+# Rota para a página de Login (falta-te esta!)
+@app.route("/login")
+def login_page():
+    return render_template("login.html")
 
-# Rota de Processamento - Recebe os dados do formulário
-@app.route('/register', methods=['POST'])
-def register():
-    nome = request.form.get('nome_completo')
-    email = request.form.get('email')
-    password = request.form.get('password')
+@app.route("/")
+def principal():
+    return render_template("register.html")
 
-    # Guardar no Banco de Dados
-    with sqlite3.connect('utilizadores.db') as con:
-        cur = con.cursor()
-        cur.execute("INSERT INTO usuarios (nome, email, password) VALUES (?, ?, ?)", 
-                    (nome, email, password))
-        con.commit()
+@app.route("/register", methods=["POST"])
+def registrar():
+    username = request.form.get("nome")
+    senha = request.form.get("senhaa")
+    n_socio = request.form.get("nsocio")
+    senha_confirm = request.form.get("senha2")
+    email = request.form.get("email")
     
-    # Redireciona de volta para a página inicial após sucesso
-    return redirect(url_for('home'))
+    # Validação simples
+    if len(senha) < 8:
+        flash("Senha pequena demais! Mínimo 8 caracteres.")
+        return redirect(url_for('principal'))
 
-if __name__ == '__main__':
-    # Cria a tabela se não existir
-    with sqlite3.connect('utilizadores.db') as con:
-        con.execute('''CREATE TABLE IF NOT EXISTS usuarios 
-                    (id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, email TEXT, password TEXT)''')
+    try:
+        with sqlite3.connect("teste.db") as conn:
+            cur = conn.cursor()
+            # O nome da tabela deve ser 'usuarios' para bater certo com o create
+            cur.execute("INSERT INTO usuarios (username, email, n_socio, senha) VALUES (?, ?, ?, ?)", 
+                       (username, email, n_socio, senha))
+            conn.commit()
+    except Exception as e:
+        flash(f"Erro ao registar: {e}")
+        return redirect(url_for('principal'))
+
+    return redirect(url_for('login_page')) # Redireciona para a função da página de login
+
+if __name__ == "__main__":
+    # Criar a tabela corretamente antes de correr o app
+    with sqlite3.connect("teste.db") as conn:
+        conn.execute("""CREATE TABLE IF NOT EXISTS usuarios (
+            id INTEGER PRIMARY KEY AUTOINCREMENT, 
+            username TEXT, 
+            email TEXT, 
+            n_socio INTEGER UNIQUE, 
+            senha TEXT NOT NULL)""")
     
-    # Inicia o servidor web
     app.run(debug=True)

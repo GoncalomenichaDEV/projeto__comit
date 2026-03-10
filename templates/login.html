@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Benfica - Login</title>
+    <link rel="stylesheet" href="/static/styyelogin.css">
+</head>
+<body>
+    <div class="caixa-benfica">
+        <h2>LOGIN SLB</h2>
+        
+        <form action="/auth" method="POST">
+            <input type="text" name="email" placeholder="E-mail" required>
+            <input type="password" name="senha" placeholder="Palavra-passe" required>
+            
+            <button type="submit" class="btn-vermelho">ENTRAR</button>
+        </form>
+        
+        <br>
+        <a href="/" class="link-simples">Não tens conta? Regista-te</a>
+    </div>
+</body>
+</html>

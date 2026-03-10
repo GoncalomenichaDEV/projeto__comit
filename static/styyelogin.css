@@ -1,0 +1,92 @@
+/* style.css */
+
+/* Reset básico para tirar margens chatas do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Fundo com um cinza muito leve para destacar a caixa branca */
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* A caixa principal com efeito de profundidade */
+.caixa-benfica {
+    background: #ffffff;
+    padding: 40px;
+    width: 350px;
+    border-radius: 15px; /* Cantos mais redondos */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+    border-top: 6px solid #E1000F; /* Linha vermelha no topo */
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilo dos inputs (campos de texto) */
+input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease; /* Efeito ao clicar */
+}
+
+input:focus {
+    outline: none;
+    border-color: #E1000F; /* Muda para vermelho quando clicas para escrever */
+}
+
+/* Botão com efeito de "Hover" (passar o rato) */
+.btn-vermelho {
+    width: 100%;
+    background-color: #E1000F;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s transform 0.2s;
+}
+
+.btn-vermelho:hover {
+    background-color: #b3000c; /* Escurece um pouco ao passar o rato */
+    transform: translateY(-2px); /* Pequeno salto para cima */
+}
+
+.btn-vermelho:active {
+    transform: translateY(0); /* Volta ao normal ao clicar */
+}
+
+/* Links mais bonitos */
+.link-simples {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.link-simples:hover {
+    color: #E1000F;
+    text-decoration: underline;
+}

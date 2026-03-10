@@ -1,0 +1,140 @@
+:root {
+  --slb-red: #B90000; /* Um vermelho mais sóbrio e profundo */
+  --text-dark: #1a1a1a;
+  --text-light: #666666;
+  --bg-soft: #f8f9fa;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--white);
+  height: 100vh;
+}
+
+.page-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Lado Esquerdo - Visual e Impacto */
+.brand-side {
+  flex: 1;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+              url('estadio-luz-noite.jpg') center/cover;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.brand-content h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; }
+.brand-content p { font-size: 1.1rem; opacity: 0.9; font-weight: 300; }
+
+/* Lado Direito - O Formulário Clean */
+.form-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+header p {
+  color: var(--text-light);
+  margin-bottom: 40px;
+}
+
+/* Inputs Refinados */
+.input-box { margin-bottom: 24px; }
+
+.input-box label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: var(--bg-soft);
+}
+
+.input-box input:focus {
+  outline: none;
+  border-color: var(--slb-red);
+  background: white;
+  box-shadow: 0 4px 12px rgba(185, 0, 0, 0.1);
+}
+
+/* Botão de Classe */
+.btn-submit {
+  width: 100%;
+  padding: 16px;
+  background: var(--slb-red);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s,0.3s;
+  letter-spacing: 1px;
+}
+
+.btn-submit:hover {
+  background: #900000;
+  transform: translateY(-2px);
+}
+
+.footer-links {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: var(--slb-red);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-back {
+  display: block;
+  margin-top: 20px;
+  color: var(--text-light) !important;
+  font-weight: 400 !important;
+}
+
+/* Responsivo para telemóvel */
+@media (max-width: 900px) {
+  .brand-side { display: none; }
+}
